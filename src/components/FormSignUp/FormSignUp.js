@@ -1,11 +1,12 @@
 import React from 'react';
-import '../Form/Form.css'
-import '../FormHooks/useForm'
+// import '../Form/Form.css';
+import '../FormHooks/useForm';
 import useForm from '../FormHooks/useForm';
 import validate from '../FormHooks/validateInfo';
 
+
 const FormSignUp = () => {
-    const {handleChange, values, handleSubmit} = useForm(validate);
+    const {handleChange, values, handleSubmit, errors} = useForm(validate);
     return (
         <div className="form-content-right">
             <form className="form" onSubmit = {handleSubmit}>
@@ -26,8 +27,8 @@ const FormSignUp = () => {
                         placeholder="Enter Your Name: "
                         value = {values.username}
                         onChange = {handleChange}
-
                     />
+                    {errors.username && <p>{errors.username}</p> }
                 </div>
                 <div className="form-input">
                     <label htmlFor="email" className="form-label">
@@ -42,6 +43,7 @@ const FormSignUp = () => {
                         value = {values.email}
                         onChange = {handleChange}
                     />
+                    {errors.email && <p>{errors.email}</p> }
                 </div>
                 <div className="form-input">
                     <label htmlFor="password" className="form-label">
@@ -56,6 +58,7 @@ const FormSignUp = () => {
                         value = {values.password}
                         onChange = {handleChange}
                     />
+                    {errors.passowrd && <p>{errors.passowrd}</p> }
                 </div>
                 <div className="form-input">
                     <label htmlFor="password2" className="form-label">
@@ -70,6 +73,7 @@ const FormSignUp = () => {
                         value = {values.password2}
                         onChange = {handleChange}
                     />
+                    {errors.passowrd2 && <p>{errors.passowrd2}</p> }
                 </div>
                 <button className="form-input-btn"
                     type="submit"
