@@ -50,14 +50,13 @@ const FormSignUp = ({submitForm}) => {
                     </label>
                     <input 
                         type="password"
-                        id="password"
                         name="password"
                         className="form-input"
                         placeholder="Enter Your Password "
                         value = {values.password}
                         onChange = {handleChange}
                     />
-                    {errors.passowrd && <p>{errors.passowrd}</p> }
+                    {errors.password && <p>{errors.password}</p> }
                 </div>
                 <div className="form-inputs">
                     <label htmlFor="password2" className="form-label">
@@ -65,14 +64,13 @@ const FormSignUp = ({submitForm}) => {
                     </label>
                     <input 
                         type="password"
-                        id="password2"
                         name="password2"
                         className="form-input"
                         placeholder="Enter Your password again "
                         value = {values.password2}
                         onChange = {handleChange}
                     />
-                    {errors.passowrd2 && <p>{errors.passowrd2}</p>}
+                    {errors.password2 && <p>{errors.password2}</p>}
                 </div>
                 <button className="form-input-btn"
                     type="submit"
