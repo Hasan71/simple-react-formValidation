@@ -1,15 +1,16 @@
 export default function validateInfo(values) {
-    let errors = {};
+    let errors = {}
   
-    // if (values.username.length == 0) {
-    //   errors.username = 'Username required';
-    // }
+    if (!values.username) {
+      errors.username = "Username required";
+    }
   
     if (!values.email) {
-      errors.email = 'Email required';
+      errors.email = "Email required";
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-      errors.email = 'Email address is invalid';
+      errors.email = "Email address is invalid";
     }
+
     if (!values.password) {
       errors.password = 'Password is required';
     } else if (values.password.length < 6) {
@@ -21,5 +22,6 @@ export default function validateInfo(values) {
     } else if (values.password2 !== values.password) {
       errors.password2 = 'Passwords do not match';
     }
+
     return errors;
   }

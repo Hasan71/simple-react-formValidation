@@ -10,7 +10,7 @@ const FormSignUp = ({submitForm}) => {
         <div className="form-content-right">
             <form onSubmit = {handleSubmit} className="form" noValidate>
                 <h1>
-                    Get Started With US Today. Create Your Account 
+                    Get Started With Us Today. Create Your Account 
                      By Filing out the the 
                      Information Bellow.
                 </h1>
@@ -23,7 +23,7 @@ const FormSignUp = ({submitForm}) => {
                         id="username"
                         name="username"
                         className="form-input"
-                        placeholder="Enter Your Name: "
+                        placeholder="Enter Your Name "
                         value = {values.username}
                         onChange = {handleChange}
                     />
@@ -38,7 +38,7 @@ const FormSignUp = ({submitForm}) => {
                         id="email"
                         name="email"
                         className="form-input"
-                        placeholder="Enter Your Email: "
+                        placeholder="Enter Your Email "
                         value = {values.email}
                         onChange = {handleChange}
                     />
@@ -53,7 +53,7 @@ const FormSignUp = ({submitForm}) => {
                         id="password"
                         name="password"
                         className="form-input"
-                        placeholder="Enter Your Password: "
+                        placeholder="Enter Your Password "
                         value = {values.password}
                         onChange = {handleChange}
                     />
@@ -68,11 +68,11 @@ const FormSignUp = ({submitForm}) => {
                         id="password2"
                         name="password2"
                         className="form-input"
-                        placeholder="Enter Your password again: "
+                        placeholder="Enter Your password again "
                         value = {values.password2}
                         onChange = {handleChange}
                     />
-                    {errors.passowrd2 && <p>{errors.passowrd2}</p> }
+                    {errors.passowrd2 && <p>{errors.passowrd2}</p>}
                 </div>
                 <button className="form-input-btn"
                     type="submit"
