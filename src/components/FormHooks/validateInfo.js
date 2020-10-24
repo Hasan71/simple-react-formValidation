@@ -2,11 +2,11 @@ export default function validateInfo(values) {
     let errors = {}
   
     if (!values.username) {
-      errors.username = "Username required";
+      errors.username = "Username is required";
     }
   
     if (!values.email) {
-      errors.email = "Email required";
+      errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
       errors.email = "Email address is invalid";
     }
